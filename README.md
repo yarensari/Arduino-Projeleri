@@ -35,11 +35,11 @@
 ![3_proje](https://github.com/user-attachments/assets/1411d22e-48cd-4b37-b278-c81b2ec54951)
 
 ### **PROJE 4 : LEDİN BUTON İLE KONTROLÜ 1** ###
-#### Projede pull-up dirençle bağlanmış olan butonun basılma durumunda ledin yanması, basılmama durumunda ise ledin sönmesi hedeflenmiştir. ####
+#### Projede Arduino'nun dahili pull-up direnci kullanılarak buton bağlanmıştır. Butona basılma durumunda ledin yanması, basılmama durumunda ise ledin sönmesi hedeflenmiştir. ####
 #### Bu projede Arduino'nun ***Serial.begin(), Serial.println(), pinMode(), digitalWrite() ve digitalRead()*** komutları kullanılmıştır. ####
-#### Dijital Giriş-Çıkış pinlerinden olan 2. pin ***INPUT_PULLUP*** olarak konfigüre edilmiştir. Bu pinle butondan gelen lojik seviyeler okunacak ve lojik duruma göre led yanıp sönecektir. ####
+#### Dijital Giriş-Çıkış pinlerinden olan 2. pin ***INPUT_PULLUP*** olarak konfigüre edilmiştir. Bu pinle butondan gelen lojik seviyeler okunacak ve lojik duruma göre led yanıp sönecektir. Aynı zamanda Arduino'da bulunan pull-up direnci kullanılacaktır. Dolayısıyla ekstra direnç bağlanmamıştır. ####
 #### Dijital Giriş-Çıkış pinlerinden olan 12. pin ***OUTPUT*** olarak konfigüre edilmiştir. 12. pine bağlı olan led ve direnç butonun lojik durumuna göre yanıp sönecektir. ####
 #### Projede kullanılan buton pull-up direnciyle bağlanmıştır. Dolayısıyla butona basılma durumunda 2. pine 0V gerilim düşümü olmaktadır. 0V gerilim düşümünün lojik seviyesi sıfırdır. Butona basıldığında ledin yanması planlanmıştır. Amaca uygun olması için if-else sorgularında lojik seviye 0 olduğu zaman 12. pin HIGH durumuna çekilmiştir ve led yanmıştır. Böylelikle butona basılma durumunda led yanmaktadır. Butona basılmama durumunda 2. pine 5V gerilim düşümü olacaktır. 5V gerilim düşümünün lojik seviyesi birdir. Butona basılmadığında ledin sönmesi planlanmıştır. Amaca uygun olması için if-else sorgularında lojik seviye 1 olduğu zaman 12. pin LOW durumuna çekilmiştir ve led sönmüştür. ####
 #### Proje 4'ün Proteus'ta oluşturulan devresi eklenmiştir. ####
-![4_proje](https://github.com/user-attachments/assets/b118e2f7-ab21-4591-8182-c4cf26d3b995)
-#### _Projede yer alan pull-up direnci pinin alabileceği maksimum akım değerine (*20mA*) göre belirlenmiştir. Böylelikle olası hasarlar engellenmiştir._
+![4_proje](https://github.com/user-attachments/assets/1389675a-04a5-4fc3-8e86-fee4bd353e23)
+#### _Projede pull-up direnci yer almamıştır. Arduino'nun pull-up direnci kullanılmıştır. Dolayısıyla olası hasarlarla karşılaşılmamıştır._ ####
